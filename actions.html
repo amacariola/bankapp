@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="stylesheet" rel="stylesheet" href="styles.css">
+    <script src="script.js" async></script>
+    <title>Foos Bank</title>
+</head>
+
+<body>
+    <a href="main.html">Main Menu</a>
+
+    <div class="transact-container">
+        <h1>Transactions</h1>
+        <p id="transaction_status"></p>
+        <button type="button" class="button" onclick='toggleTransferOptions("deposit");'>Deposit Transaction</button>
+        <div class="card" id="deposit_container" style="display:none;">
+            <div class="content">
+                <h3>Deposit</h3>
+                <form id="deposit_form">
+                    <div class="mb-3">
+                        <label for="deposit_name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="depositor" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="deposit" class="form-label">Enter Amount</label>
+                        <input type="number" class="form-control" id="deposit" required>
+                    </div>
+                    <button type="submit" class="button">Deposit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-3"></div>
+            <div class="col-md-6 col-12 content p-4 bg-forms">
+                <button type="button" class="btn btn-primary create-btn"
+                    style="background-color: rgb(255, 253, 251);color:black;outline:none;border:none;"
+                    onclick='toggleTransferOptions("withdraw");'>Withdraw Transaction</button>
+            </div>
+        </div>
+        <div class="row mb-5" id="withdraw_container" style="display:none;">
+            <div class="col-3"></div>
+            <div class="col-md-6 col-12 content p-4 bg-forms">
+                <h3 class="text-center">Withdraw</h3>
+                <form id="withdraw_form">
+                    <div class="mb-3">
+                        <label for="withdraw_name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="withdraw_name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="withdraw" class="form-label">Enter Amount</label>
+                        <input type="number" class="form-control" id="withdraw">
+                    </div>
+                    <button type="submit" class="btn btn-primary create-btn">Withdraw</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-3"></div>
+            <div class="col-md-6 col-12 content p-4 bg-forms">
+                <button type="button" class="btn btn-primary create-btn"
+                    style="background-color: rgb(255, 253, 251);color:black;outline:none;border:none;"
+                    onclick='toggleTransferOptions("transfer");'>Transfer Transaction</button>
+            </div>
+        </div>
+        <div class="row mb-5" id="transfer_container" style="display:none;">
+            <div class="col-3"></div>
+            <div class="col-md-6 col-12 content p-4 bg-forms">
+                <h3 class="text-center">Transfer</h3>
+                <form id="transfer">
+                    <div class="mb-3">
+                        <label for="sender" class="form-label">Sender Name</label>
+                        <input type="text" class="form-control" id="trans_sender">
+                        <br>
+                        <label for="receiver" class="form-label">Receiver Name</label>
+                        <input type="text" class="form-control" id="trans_receiver">
+                    </div>
+                    <div class="mb-4">
+                        <label for="transfer" class="form-label">Enter Amount</label>
+                        <input type="number" class="form-control" id="transfer_amt">
+                    </div>
+                    <button type="submit" class="btn btn-primary create-btn">Transfer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

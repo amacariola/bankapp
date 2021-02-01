@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="stylesheet" rel="stylesheet" href="styles.css">
+    <script src="script.js" async></script>
+    <title>Foos Bank</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="act.html">Transactions</a>
+        <a href="index.html">Home</a>
+        <img class="img3" src="./img/—Pngtree—vector atm machine_841455.png" alt="img">
+        <img  class="img4" src="./img/134e05487c82bcab72829613d0525383.gif" alt="img">
+    </div>
+    <div class="main-container">
+        <div class="card">
+            <div class="content">
+                <form id="getBalance">
+                    <h2>:D</h2>
+                    <h3>Balance Inquiry</h3>
+                    <label for="Name" class="form-label">Name</label><br>
+                    <input type="text" id="Name" aria-describedby="emailHelp" required>
+                    <br><br>
+                    <button type="submit" class="create-btn">Get Balance</button><br><br>
+                    <img class="card-img" src="/img/AW4048160_05.gif">
+                </form>
+            </div>
+        </div>
+        <div class="card-table">
+            <h2>Details</h2>
+            <div class="content">
+                <h3 id="bal_name"></h3>
+                <h3 id="balance"></h3>
+                <table class="transactions" id="transactions" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Transaction Date</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <td>No Transaction Data</td>
+                    </tbody>
+                </table>
+                <br><br><button type="button" class="create-btn" id="clear">Clear</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

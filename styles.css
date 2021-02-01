@@ -1,0 +1,608 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(./img/minimalism-blue.jpg);
+    background-size: cover;
+}
+
+.navbar 
+{
+
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height:40px;
+    width:100%;
+    z-index:1;
+}
+
+.navbar a
+{
+    display: block;
+    color: #ffff;
+    font-size: 1em;
+    background: rgb(248, 42, 145);
+    padding:  5px 5px;
+    margin: 5px;
+    border-color: greenyellow;
+}
+
+.navbar h2
+{
+    color: #ffff;
+    padding:  5px 5px;
+    margin: 5px;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar h2 span
+{
+    color: rgb(53, 171, 250);
+}
+
+.img1
+{
+    position: absolute;
+    height: 500px;
+    width: 300px;
+    top: 100%;
+    right: 64%;
+    animation: fly 8s;
+}
+
+.img2
+{
+    position: absolute;
+    height: 250px;
+    width: 200px;
+    top: 100%;
+    left: 70%;
+    animation: fly 8s;
+}
+
+.img3
+{
+    position: absolute;
+    height: 700px;
+    width: 600px;
+    top: 220%;
+    right: -3%;
+}
+
+.img4
+{
+    position: absolute;
+    height: 500px;
+    width: 400px;
+    top: 220%;
+    right: 70%;
+}
+
+
+
+.container
+{
+    position: absolute;
+    top: 20%;
+    right: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container h1
+{
+    position: relative;
+    color: #ffff;
+    font-size: 4em;
+    font-weight: 600;
+    margin-top: 5%;
+    margin-right: 10%;
+    right: 14%;
+    animation: slide 3s;
+}
+
+.container h2
+{
+    position: relative;
+    color: #ffff;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-right: 10%;
+    right: 23%;
+    animation: slide 5s
+}
+
+@keyframes slide
+{
+    0%
+    {
+        margin-right: 40%;
+    }
+    25%
+    {
+        margin-right: 10%;
+    }
+    50%
+    {
+        margin-right: 10%;
+    }
+    100%
+    {
+        margin-right: 10%;
+    }
+}
+
+
+.container .card
+{
+    position: fixed;
+    top:25%;
+    left:60%;
+    width: 280px;
+    height: 300px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    animation: flip 3s;
+}
+
+.container .card .content
+{
+    padding: 20px;
+    text-align: left;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5%;
+}
+
+.container .card .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .content h2
+{
+    position: absolute;
+    top: -60px;
+    right: 4px;
+    font-size: 8em;
+    color: rgba(255,255,255,0.5);
+    pointer-events: none;
+}
+
+.container .card .content h3
+{
+    font-size: 1.8em;
+    color:#fff;
+    z-index: 1;
+}
+
+.container .card .form-label
+{
+    
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .card .create-btn
+{
+    height: 30px;
+    width: 100px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.container .card input
+{
+    height: 3.1ch;
+}
+
+.main-container
+{
+    position: absolute;
+    top: 20%;
+    right: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.main-container .card
+{
+    position: fixed;
+    top:5%;
+    left:20%;
+    width: 280px;
+    height: 500px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    animation: flip 2s;
+}       
+
+.main-container .card .content
+{
+    padding: 20px;
+    text-align: left;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5%;
+}
+
+.main-container .card .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.main-container .card .content h2
+{
+    position: absolute;
+    top: -100%;
+    right: 4px;
+    font-size: 8em;
+    color: rgba(255,255,255,0.5);
+    pointer-events: none;
+}
+
+.main-container .card .content h3
+{
+    font-size: 1.8em;
+    color:#fff;
+    z-index: 1;
+}
+
+.main-container .card .content .card-img
+{
+    position: absolute;
+    top: 80%;
+    right:7%;
+    height: 190px;
+    width: 150px;
+}
+
+.main-container .card .form-label
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 400;
+}
+
+.main-container .card .create-btn
+{
+    height: 30px;
+    width: 100px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.main-container .card input
+{
+    height: 3.1ch;
+}
+
+.main-container .card-table
+{
+    padding: 5px;
+    position: fixed;
+    top:5%;
+    left:42.4%;
+    width: 400px;
+    height: 500px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    animation: backflip 3s;
+}
+
+.main-container .card-table .content
+{
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    transform: translateY(100px);
+    transition: 0.5%;
+}
+
+.main-container .card-table .content
+{
+    transform: translateY(0px);
+    
+}
+
+.main-container .card-table h2
+{
+    position: fixed;
+    text-align: center;
+    top: 1%;
+    right: 4px;
+    font-size: 5em;
+    color: rgba(255,255,255,0.5);
+    pointer-events: none;
+}
+
+.main-container .card-table .content h3
+{
+    font-size: 1.8em;
+    color:#fff;
+    z-index: 1;
+}
+
+.main-container .card-table .form-label
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 400;
+}
+
+.main-container .card-table .create-btn
+{
+    height: 30px;
+    width: 100px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.main-container .card-table input
+{
+    height: 3.1ch;
+}
+
+.main-container .card-table p
+{
+    color: #ffff;
+    font-size: 1em;
+}
+
+.main-container .card-table tbody
+{
+    text-align: center;
+    color: #ffff;
+}
+
+.main-container .card-table th
+{
+    color: #ffff;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.main-container .card-table td
+{
+    padding: 1px;
+    animation: fadein 2s;
+}
+
+
+.post-wrap {
+    min-width: 300px;
+    max-width: 380px;
+    height: 420px;
+    perspective: 1000px;
+    flex: 1;
+    margin: 0 15px 30px;
+}
+.post {
+    position: relative; /* Required to absolutely position the faces */
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.post-front, .post-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 22, 255, 0.26);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.post-back {
+    transform: rotateY(180deg);
+}
+.post-wrap:hover .post {
+    transform: rotateY(180deg);
+}
+.post-img {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.post-info {
+    padding: 20px 30px 30px;
+}
+.post-info span {
+    font-size: 0.8rem;
+    color: #f5eeee;
+}
+.post-info h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    color: #ffff;
+}
+.post-back {
+    background-color: #fa086d79;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* To push the read more button to bottom */
+    align-items: flex-start; /* To position the read more button at the left */
+}
+.post-back h2{
+    color: #ffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+.post-back p {
+    color: #ffff;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.post-back a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #5678ba;
+    padding: 10px 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.post-back input
+{
+    height: 30px;
+}
+
+.post-back button
+{
+    height: 30px;
+    width: 100px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.trans-container {
+    top: 10%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Required to position the posts one below the other on smaller devices */
+}
+
+
+@keyframes flip 
+{
+    0% 
+    {
+        transform: rotateY(90deg);
+    }
+    25% 
+    {
+        transform: rotateY(0deg);
+    }
+    50% 
+    {
+        transform: rotateY(0deg);
+    }
+    100% 
+    {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes fly
+{
+    0%
+    {
+        top: 100%;
+    }
+    25%
+    {
+        top: 84%;
+    }
+    50%
+    {
+        top: -84%;
+    }
+    100%
+    {
+        top: -74%;
+    }
+}
+
+@keyframes backflip 
+{
+    0% 
+    {
+        transform: rotateY(-180deg);
+    }
+    25% 
+    {
+        transform: rotateY(0deg);
+    }
+    50% 
+    {
+        transform: rotateY(0deg);
+    }
+    100% 
+    {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes fadein
+{
+    0% 
+    {
+        opacity: 0;
+    }
+    25% 
+    {
+        opacity: 0;
+    }
+    50% 
+    {
+        opacity: 0;
+    }
+    100% 
+    {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="stylesheet" rel="stylesheet" href="styles.css">
+    <script src="script.js" async></script>
+    <title>Foos Bank</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="trans-container">
+        <div class="post-wrap">
+            <!-- The parent element -->
+            <div class="post">
+                <!-- Child element that flips -->
+                <div class="post-front">
+                    <div class="post-img" style="background-image: url('/img/1611908142079.gif');"></div>
+                    <div class="post-info">
+                        <h2>Deposit</h2>
+                    </div>
+                </div>
+                <div class="post-back">
+                    <div class="post-except">
+                        <form id="deposit_form">
+                            <h2>Deposit</h2>
+                            <p>Name</p>
+                            <input type="text" id="depositor" required>
+                            <p>Enter Amount</p>
+                            <input type="number" id="deposit" required><br><br>
+                            <button type="submit">Deposit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post-wrap">
+            <!-- The parent element -->
+            <div class="post">
+                <!-- Child element that flips -->
+                <div class="post-front">
+                    <div class="post-img" style="background-image: url('img/atm_d.gif');"></div>
+                    <div class="post-info">
+                        <h2>Withdraw Money</h2>
+                    </div>
+                </div>
+                <div class="post-back">
+                    <div class="post-except">
+                        <form id="withdraw_form">
+                            <h2>Withdraw</h2>
+                            <p>Name</p>
+                            <input type="text" id="withdraw_name">
+                            <p>Enter Amount</p>
+                            <input type="number" id="withdraw"><br><br>
+                            <button type="submit">Withdraw</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post-wrap">
+            <!-- The parent element -->
+            <div class="post">
+                <!-- Child element that flips -->
+                <div class="post-front">
+                    <div class="post-img" style="background-image: url('img/giphy.gif');"></div>
+                    <div class="post-info">
+                        <h2>Transfer Money</h2>
+                    </div>
+                </div>
+                <div class="post-back">
+                    <div class="post-except">
+                        <form id="transfer">
+                                <h2>Transfer Money</h2>
+                                <p>Sender Name<p>
+                                <input type="text" id="trans_sender">
+                                <br>
+                                <p>Receiver Name</p>
+                                <input type="text" id="trans_receiver">
+                                <p>Enter Amount</p>
+                                <input type="number" id="transfer_amt"><br><br>
+                            <button type="submit">Transfer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
